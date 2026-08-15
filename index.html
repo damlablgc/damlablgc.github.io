@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Damla Bilgiç — Portfolio</title>
+<title>Damla Bilgiç: Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -403,7 +403,7 @@
         <span class="hl">Machine Learning</span> and <span class="hl-green">software development</span>.
       </p>
       <div class="edu-row">
-        <div class="edu-chip"><span class="dot"></span> <strong>MSc</strong>&nbsp;AI &amp; Robotics — in progress</div>
+        <div class="edu-chip"><span class="dot"></span> <strong>MSc</strong>&nbsp;AI &amp; Robotics (in progress)</div>
         <div class="edu-chip"><span class="dot"></span> <strong>BSc</strong>&nbsp;Biology</div>
         <div class="edu-chip"><span class="dot"></span> <strong>BA</strong>&nbsp;Management Information Systems</div>
         <div class="edu-chip"><span class="dot"></span> <strong>AAS</strong>&nbsp;Computer Programming</div>
@@ -427,7 +427,7 @@
           <p>
             Simulates an HC-SR04 ultrasonic sensor with realistic sensor noise, filters readings with a sliding-window
             average, detects approach/retreat trends, and uses a locally-run Phi-3 Mini model (via Ollama) to explain
-            every navigation decision in plain English — built for auditable, offline-capable robot reasoning.
+            every navigation decision in plain English, built for auditable, offline-capable robot reasoning.
           </p>
           <div class="card-foot">
             <span>Python · Phi-3 Mini · Ollama</span>
@@ -437,12 +437,12 @@
             <summary>Open case</summary>
             <div class="case-body">
               <p>No real HC-SR04 hardware was on hand, so the sensor is software-simulated with injected noise
-              rather than idealized readings — the goal was to test the filtering logic under realistic
+              rather than idealized readings. The goal was to test the filtering logic under realistic
               conditions, not a clean signal.</p>
               <p>A single raw reading is noisy enough to trigger false approach/retreat calls. A sliding-window
               average smooths that out before the decision layer sees it, trading a small amount of latency
               for fewer false triggers.</p>
-              <p>Explanations run through <strong>Phi-3 Mini via Ollama, locally</strong> — no cloud API call
+              <p>Explanations run through <strong>Phi-3 Mini via Ollama, locally</strong>: no cloud API call
               per decision. That keeps the robot's reasoning auditable offline and removes a network dependency
               from a real-time control loop.</p>
               <p>Validated with <strong>75/75 pass-fail tests</strong> across simulated approach/retreat scenarios.</p>
@@ -456,6 +456,9 @@
           <p>
             Reframed a heavily imbalanced 7-class dermatoscopy dataset (HAM10000) as a binary melanoma-vs-rest problem
             to prioritize catching dangerous cases, using class weighting and EfficientNetB0 transfer learning.
+          </p>
+          <p>
+            Accuracy dropped on purpose: the model was optimized to catch melanoma cases, not to maximize overall accuracy.
           </p>
           <table class="metric-table">
             <tr><th></th><th>Naive model</th><th>This model</th></tr>
@@ -478,7 +481,7 @@
               still favor "rest." An <strong>~8x class weight</strong> on melanoma penalizes those misses hard
               enough during training to move the decision boundary.</p>
               <p>Early stopping watched <strong>val_recall</strong>, not val_loss. Val_loss would have stopped
-              training at the point of best overall fit, which is not the same point as best melanoma recall —
+              training at the point of best overall fit, which is not the same point as best melanoma recall;
               those two curves diverge under class weighting.</p>
               <p>Result after 7 epochs: <strong>92% melanoma recall</strong>, 17 missed cases out of 223, against
               a naive baseline that misses all 223 while reporting ~89% accuracy.</p>
@@ -488,9 +491,9 @@
 
         <div class="card reveal">
           <span class="tag">Scholarship Project</span>
-          <h3>Nadir — Rare Earth Element Classifier</h3>
+          <h3>Nadir: Rare Earth Element Classifier</h3>
           <p>
-            A scholarship-backed research project focused on classifying rare earth elements — part of my ongoing
+            A scholarship-backed research project focused on classifying rare earth elements, part of my ongoing
             work applying ML to materials and resource identification problems.
           </p>
           <div class="card-foot">
@@ -501,7 +504,7 @@
             <summary>Open case</summary>
             <div class="case-body">
               <p>This is ongoing university research, disclosed here by scope only. No methodology, dataset
-              details, or metrics are shared while the work is unpublished — that's a disclosure boundary,
+              details, or metrics are shared while the work is unpublished; that's a disclosure boundary,
               not a placeholder. Happy to talk through it directly.</p>
             </div>
           </details>
@@ -523,7 +526,7 @@
             <summary>Open case</summary>
             <div class="case-body">
               <p>Frontend prototype: a full onboarding-to-recommendation flow for DNA-informed nutrition advice.
-              The DNA analysis itself is <strong>simulated, not a real lab pipeline</strong> — this project is
+              The DNA analysis itself is <strong>simulated, not a real lab pipeline</strong>: this project is
               about the product and interaction layer, not genomic inference. Stated here explicitly so the
               scope reads accurately.</p>
             </div>
@@ -562,6 +565,7 @@
             <a href="mailto:damlaazrabilgic@gmail.com" class="contact-chip">✉️ damlaazrabilgic@gmail.com</a>
             <a href="tel:+905070997094" class="contact-chip">📞 +90 507 099 70 94</a>
             <a href="https://www.linkedin.com/in/damlabilgic/" target="_blank" class="contact-chip">💼 LinkedIn</a>
+            <a href="https://calendly.com/damlaazrabilgic/30min" target="_blank" class="contact-chip">📅 Book a call</a>
           </div>
         </div>
         <a href="assets/damla-bilgic-cv.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download CV (PDF)</a>
@@ -572,7 +576,7 @@
       <span>© 2026 Damla Bilgiç</span>
       <div class="socials">
         <a href="https://github.com/damlablgc" target="_blank">GitHub</a>
-        <a href="#">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/damlabilgic/" target="_blank">LinkedIn</a>
         <a href="mailto:damlaazrabilgic@gmail.com">Email</a>
       </div>
     </footer>
@@ -641,7 +645,7 @@
     setTimeout(()=> svg.remove(), fallDur*1000 + 200);
   }
 
-  // A handful drifting at first, then just one every few seconds — rare, not a flurry
+  // A handful drifting at first, then just one every few seconds, rare, not a flurry
   const initialPetals = window.innerWidth < 700 ? 2 : 4;
   for(let i=0;i<initialPetals;i++) setTimeout(spawnPetal, i*2200);
   setInterval(spawnPetal, 4200 + Math.random()*2600);
